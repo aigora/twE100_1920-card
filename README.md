@@ -1,11 +1,17 @@
 # Título del trabajo
 
-Descripción breve del proyecto a realizar (2-3 frases).
+Juego de poker de un jugador, con baraja reducida a 20 cartas usando ases, dieces, J's, Q's y K's
 
 ## Integrantes del equipo
 
-Nombres, apellidos, y usuario GitHub de los integrantes del equipo.
+Daniel Zamarra Rodríguez (danizamarra)
+Roberto Rodríguez Pérez ()
+Carlos Xu Lin ()
+Alberto Leamus Rondón ()
 
 ## Objetivos del trabajo
 
-Lista de los objetivos que se persiguen con el trabajo propuesto.
+- Hacer un programa que simule de la forma más fiel posible este juego de cartas
+- Poner en practica los conociminetos adquiridos durante el desarrollo de la asignatura
+- 
+
