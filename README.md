@@ -13,5 +13,5 @@ Juego de poker de un jugador, con baraja reducida a 20 cartas usando ases, diece
 
 - Hacer un programa que simule de la forma más fiel posible este juego de cartas
 - Poner en practica los conociminetos adquiridos durante el desarrollo de la asignatura
-- 
+
 
