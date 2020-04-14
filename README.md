@@ -4,10 +4,10 @@ Juego de poker de un jugador, con baraja reducida a 20 cartas usando ases, diece
 
 ## Integrantes del equipo
 
-Daniel Zamarra Rodríguez (danizamarra)
-Roberto Rodríguez Pérez ()
-Carlos Xu Lin (carlosxli)
-Alberto Leamus Rondón (Albertoleamus)
+- Daniel Zamarra Rodríguez (danizamarra)
+- Roberto Rodríguez Pérez (roberrodriguezperez)
+- Carlos Xu Lin (carlosxli)
+- Alberto Leamus Rondón (Albertoleamus)
 
 ## Objetivos del trabajo
 
