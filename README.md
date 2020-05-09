@@ -15,5 +15,6 @@ Juego de poker de un jugador, con baraja reducida a 20 cartas usando ases, diece
 - Poner en practica los conociminetos adquiridos durante el desarrollo de la asignatura
 
 ## Tareas que llevar a cabo
-- Conseguir que la mano de la jugada se genere sin dos cartas iguales
+- Conseguir que la mano de la jugada se genere sin dos cartas iguales (Conseguido)
+- Establcer una rutina que diferencie las diferentes jugadas ganadoras
 
