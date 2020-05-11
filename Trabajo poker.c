@@ -1,9 +1,9 @@
 /* Trabajo Informatica Grupo CARD 
 
 Integrantes: Daniel Zamarra Rodriguez (55521)
-			 Roberto Rodríguez Pérez (55437)
-			 Alberto Leamus Rondón ()
-			 Carlos Xu Lin ()
+			 Roberto RodrÃ­guez PÃ©rez (55437)
+			 Alberto Leamus RondÃ³n ()
+			 Carlos Xu Lin (55601)
 			 
 Este programa simula un juego de poker con baraja reducida */
 
