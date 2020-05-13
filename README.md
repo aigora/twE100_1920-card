@@ -1,6 +1,6 @@
 # Título del trabajo
 
-Juego de poker de un jugador, con baraja reducida a 20 cartas usando ases, dieces, J's, Q's y K's
+Juego de poker de un jugador, con la baraja francesa completa, sin comodines.
 
 ## Integrantes del equipo
 
@@ -13,8 +13,11 @@ Juego de poker de un jugador, con baraja reducida a 20 cartas usando ases, diece
 
 - Hacer un programa que simule de la forma más fiel posible este juego de cartas
 - Poner en practica los conociminetos adquiridos durante el desarrollo de la asignatura
+- Incorporar ficheros para guardar el dinero que le queda al jugador y que pueda retomar la partida mas adelante
 
 ## Tareas que llevar a cabo
-- Conseguir que la mano de la jugada se genere sin dos cartas iguales 
-- Establcer una rutina que diferencie las diferentes jugadas ganadoras
+- Conseguir que la mano de la jugada se genere sin dos cartas iguales (Conseguido)
+- Establcer una rutina que diferencie las diferentes jugadas ganadoras (Conseguido)
+- Implemetar una rutina que reconozca una escalera o escalera de color en la mano del jugador
+- Incorporar una rutina con ficheros para poder guardar la partida
 
