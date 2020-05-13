@@ -1,3 +1,15 @@
+/* Trabajo Informatica Grupo CARD 
+Integrantes: Daniel Zamarra Rodriguez (55521)
+			 Roberto Rodríguez Pérez (55437)
+			 Alberto Leamus Rondón ()
+			 Carlos Xu Lin (55601)
+			 
+Este programa simula un juego de poker con baraja reducida */
+
+
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
