@@ -1,7 +1,7 @@
 /* Trabajo Informatica Grupo CARD 
 Integrantes: Daniel Zamarra Rodriguez (55521)
-			 Roberto RodrÌguez PÈrez (55437)
-			 Alberto Leamus RondÛn ()
+			 Roberto RodrÈüåuez PÈñûez (55437)
+			 Alberto Leamus RondÈ´á (55313)
 			 Carlos Xu Lin (55601)
 			 
 Este programa simula un juego de poker con baraja reducida */
@@ -85,7 +85,7 @@ do {
 						  {{valores[0],palo[1]},{valores[1],palo[1]},{valores[2],palo[1]},{valores[3],palo[1]},{valores[4],palo[1]},{valores[5],palo[1]},{valores[6],palo[1]},{valores[7],palo[1]},{valores[8],palo[1]},{valores[9],palo[1]},{valores[10],palo[1]},{valores[11],palo[1]},{valores[12],palo[1]}},
 					   	  {{valores[0],palo[2]},{valores[1],palo[2]},{valores[2],palo[2]},{valores[3],palo[2]},{valores[4],palo[2]},{valores[5],palo[2]},{valores[6],palo[2]},{valores[7],palo[2]},{valores[8],palo[2]},{valores[9],palo[2]},{valores[10],palo[2]},{valores[11],palo[2]},{valores[12],palo[2]}},
 						  {{valores[0],palo[3]},{valores[1],palo[3]},{valores[2],palo[3]},{valores[3],palo[3]},{valores[4],palo[3]},{valores[5],palo[3]},{valores[6],palo[3]},{valores[7],palo[3]},{valores[8],palo[3]},{valores[9],palo[3]},{valores[10],palo[3]},{valores[11],palo[3]},{valores[12],palo[3]}}};
-	//Establece la semilla para el generador de n˙meros pseudo-aleatorios
+	//Establece la semilla para el generador de nÈ∑êeros pseudo-aleatorios
 	srand (time(NULL));	
 	
  
@@ -124,18 +124,18 @@ do {
 				ases=ases+1;
 				switch(ases) {
 					case 2:
-						//printf("\n°°ENHORABUENA TIENES UNA PAREJA DE ASES!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UNA PAREJA DE ASES!!");
 						pas = 1;
 						pareja = pareja + pas;
 						break;
 					case 4:
-						//printf("\n°°ENHORABUENA TIENES UN TRIO DE ASES!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UN TRIO DE ASES!!");
 						trio = trio + 1;
 						pareja -=1;
 						break;
 					case 5: 
 				
-						printf("\n\t°°ENHORABUENA TIENES UN POKER DE ASES!!");
+						printf("\n\t„ÄÄENHORABUENA TIENES UN POKER DE ASES!!");
 						
 						break;
 				}				
@@ -145,18 +145,18 @@ do {
 				doses=doses+1;
 				switch(doses) {
 					case 2:
-						//printf("\n°°ENHORABUENA TIENES UNA PAREJA DE DIECES!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UNA PAREJA DE DIECES!!");
 						p2=1;
 						pareja = pareja + p2;
 						break;
 					case 4:
-						//printf("\n°°ENHORABUENA TIENES UN TRIO DE DIECES!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UN TRIO DE DIECES!!");
 						trio = trio + 1;
 						pareja -=1;
 						break;
 					case 5: 
 					
-						printf("\n\t°°ENHORABUENA TIENES UN POKER DE DOSES!!");
+						printf("\n\t„ÄÄENHORABUENA TIENES UN POKER DE DOSES!!");
 						break;
 				}
 			}
@@ -165,18 +165,18 @@ do {
 				treses=treses+1;
 				switch(treses) {
 					case 2:
-						//printf("\n°°ENHORABUENA TIENES UNA PAREJA DE JS!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UNA PAREJA DE JS!!");
 						p3=1;
 						pareja = pareja + p3;
 						break;
 					case 4:
-						//printf("\n°°ENHORABUENA TIENES UN TRIO DE JS!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UN TRIO DE JS!!");
 						trio = trio + 1;
 						pareja -=1;
 						break;
 					case 5: 
 					
-						printf("\n\t°°ENHORABUENA TIENES UN POKER DE TRESES!!");
+						printf("\n\t„ÄÄENHORABUENA TIENES UN POKER DE TRESES!!");
 						break;
 				}
 			}
@@ -185,18 +185,18 @@ do {
 			cuatros=cuatros+1;
 				switch(cuatros) {
 					case 2:
-						//printf("\n°°ENHORABUENA TIENES UNA PAREJA DE QS!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UNA PAREJA DE QS!!");
 						p4=1;
 						pareja = pareja + p4;
 						break;
 					case 4:
-						//printf("\n°°ENHORABUENA TIENES UN TRIO DE QS!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UN TRIO DE QS!!");
 						trio = trio + 1;
 						pareja -=1;
 						break;
 					case 5: 
 					
-						printf("\n\t°°ENHORABUENA TIENES UN POKER DE CUATROS!!");
+						printf("\n\t„ÄÄENHORABUENA TIENES UN POKER DE CUATROS!!");
 						break;
 				}
 			}
@@ -205,18 +205,18 @@ do {
 				cincos=cincos+1;
 				switch(cincos) {
 					case 2:
-						//printf("\n°°ENHORABUENA TIENES UNA PAREJA DE kS!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UNA PAREJA DE kS!!");
 						p5 = 1;
 						pareja = pareja + p5;
 						break;
 					case 4:
-						//printf("\n°°ENHORABUENA TIENES UN TRIO DE KS!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UN TRIO DE KS!!");
 						trio = 1;
 						pareja -=1;
 						break;
 					case 5: 
 						
-						printf("\n\t°°ENHORABUENA TIENES UN POKER DE CINCOS!!");
+						printf("\n\t„ÄÄENHORABUENA TIENES UN POKER DE CINCOS!!");
 						break;
 				}
 			}
@@ -225,18 +225,18 @@ do {
 				seises=seises+1;
 				switch(seises) {
 					case 2:
-						//printf("\n°°ENHORABUENA TIENES UNA PAREJA DE kS!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UNA PAREJA DE kS!!");
 						p6 = 1;
 						pareja = pareja + p6;
 						break;
 					case 4:
-						//printf("\n°°ENHORABUENA TIENES UN TRIO DE KS!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UN TRIO DE KS!!");
 						trio = 1;
 						pareja -=1;
 						break;
 					case 5: 
 						
-						printf("\n\t°°ENHORABUENA TIENES UN POKER DE SEISES!!");
+						printf("\n\t„ÄÄENHORABUENA TIENES UN POKER DE SEISES!!");
 						break;
 				}
 			}
@@ -245,18 +245,18 @@ do {
 				sietes=sietes+1;
 				switch(sietes) {
 					case 2:
-						//printf("\n°°ENHORABUENA TIENES UNA PAREJA DE kS!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UNA PAREJA DE kS!!");
 						p7 = 1;
 						pareja = pareja + p7;
 						break;
 					case 4:
-						//printf("\n°°ENHORABUENA TIENES UN TRIO DE KS!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UN TRIO DE KS!!");
 						trio = 1;
 						pareja -=1;
 						break;
 					case 5: 
 						
-						printf("\n\t°°ENHORABUENA TIENES UN POKER DE SIETES!!");
+						printf("\n\t„ÄÄENHORABUENA TIENES UN POKER DE SIETES!!");
 						break;
 				}
 			}
@@ -265,18 +265,18 @@ do {
 				ochos=ochos+1;
 				switch(ochos) {
 					case 2:
-						//printf("\n°°ENHORABUENA TIENES UNA PAREJA DE kS!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UNA PAREJA DE kS!!");
 						p8 = 1;
 						pareja = pareja + p8;
 						break;
 					case 4:
-						//printf("\n°°ENHORABUENA TIENES UN TRIO DE KS!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UN TRIO DE KS!!");
 						trio = 1;
 						pareja -=1;
 						break;
 					case 5: 
 						
-						printf("\n\t°°ENHORABUENA TIENES UN POKER DE OCHOS!!");
+						printf("\n\t„ÄÄENHORABUENA TIENES UN POKER DE OCHOS!!");
 						break;
 				}
 			}
@@ -285,18 +285,18 @@ do {
 				nueves=nueves+1;
 				switch(nueves) {
 					case 2:
-						//printf("\n°°ENHORABUENA TIENES UNA PAREJA DE kS!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UNA PAREJA DE kS!!");
 						p9 = 1;
 						pareja = pareja + p9;
 						break;
 					case 4:
-						//printf("\n°°ENHORABUENA TIENES UN TRIO DE KS!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UN TRIO DE KS!!");
 						trio = 1;
 						pareja -=1;
 						break;
 					case 5: 
 						
-						printf("\n\t°°ENHORABUENA TIENES UN POKER DE NUEVES!!");
+						printf("\n\t„ÄÄENHORABUENA TIENES UN POKER DE NUEVES!!");
 						break;
 				}
 			}
@@ -305,18 +305,18 @@ do {
 				dieces=dieces+1;
 				switch(dieces) {
 					case 2:
-						//printf("\n°°ENHORABUENA TIENES UNA PAREJA DE kS!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UNA PAREJA DE kS!!");
 						p10 = 1;
 						pareja = pareja + p10;
 						break;
 					case 4:
-						//printf("\n°°ENHORABUENA TIENES UN TRIO DE KS!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UN TRIO DE KS!!");
 						trio = 1;
 						pareja -=1;
 						break;
 					case 5: 
 						
-						printf("\n\t°°ENHORABUENA TIENES UN POKER DE DIECES!!");
+						printf("\n\t„ÄÄENHORABUENA TIENES UN POKER DE DIECES!!");
 						break;
 				}
 			}
@@ -325,18 +325,18 @@ do {
 				js=js+1;
 				switch(js) {
 					case 2:
-						//printf("\n°°ENHORABUENA TIENES UNA PAREJA DE kS!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UNA PAREJA DE kS!!");
 						pj = 1;
 						pareja = pareja + pj;
 						break;
 					case 4:
-						//printf("\n°°ENHORABUENA TIENES UN TRIO DE KS!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UN TRIO DE KS!!");
 						trio = 1;
 						pareja -=1;
 						break;
 					case 5: 
 						
-						printf("\n\t°°ENHORABUENA TIENES UN POKER DE JS!!");
+						printf("\n\t„ÄÄENHORABUENA TIENES UN POKER DE JS!!");
 						break;
 				}
 			}
@@ -345,18 +345,18 @@ do {
 				qs=qs+1;
 				switch(qs) {
 					case 2:
-						//printf("\n°°ENHORABUENA TIENES UNA PAREJA DE kS!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UNA PAREJA DE kS!!");
 						pq = 1;
 						pareja = pareja + pq;
 						break;
 					case 4:
-						//printf("\n°°ENHORABUENA TIENES UN TRIO DE KS!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UN TRIO DE KS!!");
 						trio = 1;
 						pareja -=1;
 						break;
 					case 5: 
 						
-						printf("\n\t°°ENHORABUENA TIENES UN POKER DE QS!!");
+						printf("\n\t„ÄÄENHORABUENA TIENES UN POKER DE QS!!");
 						break;
 				}
 			}
@@ -365,18 +365,18 @@ do {
 				ks=ks+1;
 				switch(ks) {
 					case 2:
-						//printf("\n°°ENHORABUENA TIENES UNA PAREJA DE kS!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UNA PAREJA DE kS!!");
 						pk = 1;
 						pareja = pareja + pk;
 						break;
 					case 4:
-						//printf("\n°°ENHORABUENA TIENES UN TRIO DE KS!!");
+						//printf("\n„ÄÄENHORABUENA TIENES UN TRIO DE KS!!");
 						trio = 1;
 						pareja -=1;
 						break;
 					case 5: 
 						
-						printf("\n\t°°ENHORABUENA TIENES UN POKER DE KS!!");
+						printf("\n\t„ÄÄENHORABUENA TIENES UN POKER DE KS!!");
 						break;
 				}
 			}
@@ -424,7 +424,7 @@ do {
 		printf("\n\n\tLo sentimos, no hay premio, pruebe otra vez");
 	}
   pas= 0, p2 = 0, p3 = 0, p4 = 0, p5 = 0, p6 = 0, p7 = 0, p8 = 0, p9 = 0, p10 = 0, pj = 0, pq = 0, pk = 0;
-// RepeticiÛn
+// RepeticiÈ´á
 	opcion = FRepetir ();
 		
 		}while ((opcion == 's')  || (opcion == 'S'));
