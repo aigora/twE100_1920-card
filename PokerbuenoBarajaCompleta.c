@@ -8,12 +8,17 @@ Este programa simula un juego de poker con la baraja francesa completa */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <vectores.h>
-#include <FuncionesBasicas.h>
+#include "vectores.h"
+#include "FuncionesBasicas.h"
+#include <unistd.h>
 #define N 4
 #define M 13
 #define B 20
 #define C 5
+
+
+
+
 
 typedef struct
 {
@@ -25,7 +30,7 @@ int main(){
 //Variables
 	FPresentacion ();
 	srand (time(NULL));
-	int i, j, k, l, m;
+	int i, j, k;
 	int rm, rn, rauxv, rauxp;
 	int pc = 0, pd = 0, pp = 0, pt = 0;		//variables para color
 	int pas= 0, p2 = 0, p3 = 0, p4 = 0, p5 = 0, p6 = 0, p7 = 0, p8 = 0, p9 = 0, p10 = 0, pj = 0, pq = 0, pk = 0;	// variables para parejas
@@ -33,8 +38,9 @@ int main(){
 	int pareja = 0;
 	int trio = 0;
 	int full = 0;
-	int escalera = 0;
+
 	float dinero = 0;
+	float ingreso = 0;
 	float apuesta = 0;
 	char opcion;
 	char valores[] = {'A', '2', '3', '4', '5', '6', '7', '8', '9', 'X', 'J', 'Q', 'K'};
@@ -82,7 +88,7 @@ do {
 	//do {
 	
 
-			opcion = ' ';
+			
 			int pc = 0, pd = 0, pp = 0, pt = 0;		//variables para color
 			int pas= 0, p2 = 0, p3 = 0, p4 = 0, p5 = 0, p6 = 0, p7 = 0, p8 = 0, p9 = 0, p10 = 0, pj = 0, pq = 0, pk = 0;	// variables para parejas
 			int ases = 1, doses = 1, treses = 1, cuatros = 1, cincos = 1, seises = 1, sietes = 1, ochos = 1, nueves = 1, dieces = 1, js = 1, qs = 1, ks = 1;	//variables para contar cartas
@@ -91,7 +97,7 @@ do {
 			int pareja = 0;
 			int trio = 0;
 			int full = 0;
-			int escalera = 0;
+			
 		//Inicializacion de la baraja
 		
 			Carta baraja[N][M] = {{{valores[0],palo[0]},{valores[1],palo[0]},{valores[2],palo[0]},{valores[3],palo[0]},{valores[4],palo[0]},{valores[5],palo[0]},{valores[6],palo[0]},{valores[7],palo[0]},{valores[8],palo[0]},{valores[9],palo[0]},{valores[10],palo[0]},{valores[11],palo[0]},{valores[12],palo[0]}},
@@ -101,6 +107,11 @@ do {
 		
 		//Establecemos la apuesta de la mano que se va a jugar 
 			DineroRestante(dinero);
+			if (dinero == 0){
+					printf("\n\n\tNo tienes dinero para jugar, debes ingresar algo de dinero. ");
+					printf("\n\tSi no tiene mas dinero para ingresar o no quiere seguir jugando introduzca una cantidad negativa");
+					dinero = PedirDinero();
+				}
 			apuesta = PedirApuesta(apuesta, dinero);
 		
 		//Establece la semilla para el generador de números pseudo-aleatorios
@@ -425,26 +436,28 @@ do {
 			}
 			//Este if anidado analiza los contadores de los premios para analizar que premio tienes en la mano
 			if ((pareja==1)&&(trio==0)){
-				printf("\n\n\tENHORABUENA, TIENES UNA PAREJA!!");
-				dinero = dinero + (apuesta * 1.2);
+				printf("\n\n\t\255\255ENHORABUENA, TIENES UNA PAREJA!!");
+				dinero = dinero + (apuesta * 1.5);
 				DineroRestante (dinero);
+				pareja = 0;
 			}if (pareja==2){
-				printf("\n\n\tENHORABUENA, TIENES UNA DOBLE PAREJA!!");
-				dinero = dinero + (apuesta * 1.4);
+				printf("\n\n\t\255\255ENHORABUENA, TIENES UNA DOBLE PAREJA!!");
+				dinero = dinero + (apuesta * 2);
 				DineroRestante (dinero);
+				pareja = 0;
 			}if ((pareja==1)&&(trio==1)){
 				full +=1;
 				trio=0;
-				printf("\n\n\tENHORABUENA TIENES UN FULL!!");
-				dinero = dinero + (apuesta * 2.5);
+				printf("\n\n\t\255\255ENHORABUENA TIENES UN FULL!!");
+				dinero = dinero + (apuesta * 4);
 				DineroRestante (dinero);
 			}if (trio == 1){
-				printf("\n\n\tENHORABUENA, TIENES UN TRIO!!");
-				dinero = dinero + (apuesta * 1.6);
+				printf("\n\n\t\255\255ENHORABUENA, TIENES UN TRIO!!");
+				dinero = dinero + (apuesta * 2.5);
 				DineroRestante (dinero);
 			}if ((pc == 5)||(pp ==5)||(pd == 5)||(pt == 5)){
 				trio = 0;
-				printf("\n\n\tENHORABUENA TIENES COLOR!!!");
+				printf("\n\n\t\255ENHORABUENA TIENES COLOR!!!");
 				dinero = dinero + (apuesta * 2);
 				DineroRestante (dinero);
 			}if ((pareja == 0)&&(trio == 0)&&(full == 0)&&(pc != 5)&&(pp != 5)&&(pd != 5)&&(pt != 5)) {
@@ -456,12 +469,17 @@ do {
 				
 			}
 		  		pas= 0, p2 = 0, p3 = 0, p4 = 0, p5 = 0, p6 = 0, p7 = 0, p8 = 0, p9 = 0, p10 = 0, pj = 0, pq = 0, pk = 0;
+		
+			
 		// Repetición
 				opcion = FRepetir ();
-			if ((opcion == 'A')||(opcion == 'a')){
-				dinero = PedirDinero ();
-		}
-	}while (((opcion == 's')  || (opcion == 'S'))||(dinero > 0));
+				if ((opcion == 'a')  || (opcion == 'A')){
+					ingreso = NuevoIngreso();
+					dinero = dinero + ingreso;
+				}
+			
+		
+	}while (((opcion == 's')  || (opcion == 'S'))||((opcion == 'a')  || (opcion == 'A')));
 
 //}while (dinero > 0);
 	// Despedida y cierre:
