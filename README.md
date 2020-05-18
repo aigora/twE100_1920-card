@@ -18,5 +18,5 @@ Juego de poker de un jugador, con la baraja francesa completa, sin comodines.
 ## Tareas que llevar a cabo
 - Conseguir que la mano de la jugada se genere sin dos cartas iguales (Conseguido)
 - Establcer una rutina que diferencie las diferentes jugadas ganadoras (Conseguido)
-- Incorporar una rutina con ficheros para poder guardar la partida
+- Incorporar una rutina con ficheros para poder guardar la partida (Conseguido)
 
