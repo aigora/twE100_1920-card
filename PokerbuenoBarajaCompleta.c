@@ -11,6 +11,7 @@ Este programa simula un juego de poker con la baraja francesa completa */
 #include "vectores.h"
 #include "FuncionesBasicas.h"
 #include <unistd.h>
+#include <stdarg.h>
 #define N 4
 #define M 13
 #define B 20
@@ -24,25 +25,22 @@ typedef struct
 {
 	char valor;
 	char palo;
+	
 } Carta;
 
 int main(){
 //Variables
 	FPresentacion ();
+	Premios();
 	srand (time(NULL));
 	int i, j, k;
 	int rm, rn, rauxv, rauxp;
-	int pc = 0, pd = 0, pp = 0, pt = 0;		//variables para color
-	int pas= 0, p2 = 0, p3 = 0, p4 = 0, p5 = 0, p6 = 0, p7 = 0, p8 = 0, p9 = 0, p10 = 0, pj = 0, pq = 0, pk = 0;	// variables para parejas
-	int ases = 1, doses = 1, treses = 1, cuatros = 1, cincos = 1, seises = 1, sietes = 1, ochos = 1, nueves = 1, dieces = 1, js = 1, qs = 1, ks = 1;	//variables para contar cartas
-	int pareja = 0;
-	int trio = 0;
-	int full = 0;
-
+	FILE *arc; 
 	float dinero = 0;
 	float ingreso = 0;
 	float apuesta = 0;
 	char opcion;
+	char opcion2;
 	char valores[] = {'A', '2', '3', '4', '5', '6', '7', '8', '9', 'X', 'J', 'Q', 'K'};
 	char palo[] = {'C', 'P', 'D', 'T'};
 	//Carta baraja[B];
@@ -81,8 +79,21 @@ int main(){
 			//printf("\n");
 		}
 	
+	
 	//printf("\n\n\tEn esta timba la apuesta en fija y son siempre 100\044, por tanto no puedes ingresar menos de esa cantidad");
-	dinero = PedirDinero ();
+	opcion2=PartidaGuardada();
+	if ((opcion2=='S')||(opcion2=='s')){
+		arc=fopen("Poker.txt","r");
+		fscanf( arc, "%f", &dinero );
+		fclose(arc);
+		DineroRestante(dinero);
+		ingreso = NuevoIngreso();
+		dinero = dinero + ingreso;
+	}if ((opcion2=='N')||(opcion2=='n')){
+		dinero = 0;
+		dinero=PedirDinero();
+	}
+	
 do {
 
 	//do {
@@ -439,12 +450,12 @@ do {
 				printf("\n\n\t\255\255ENHORABUENA, TIENES UNA PAREJA!!");
 				dinero = dinero + (apuesta * 1.5);
 				DineroRestante (dinero);
-				pareja = 0;
+				//pareja = 0;
 			}if (pareja==2){
 				printf("\n\n\t\255\255ENHORABUENA, TIENES UNA DOBLE PAREJA!!");
 				dinero = dinero + (apuesta * 2);
 				DineroRestante (dinero);
-				pareja = 0;
+				//pareja = 0;
 			}if ((pareja==1)&&(trio==1)){
 				full +=1;
 				trio=0;
@@ -468,8 +479,19 @@ do {
 				printf("\n\n\t\250Te has quedado sin dinero para continuar jugando, que deseas hacer?");
 				
 			}
-		  		pas= 0, p2 = 0, p3 = 0, p4 = 0, p5 = 0, p6 = 0, p7 = 0, p8 = 0, p9 = 0, p10 = 0, pj = 0, pq = 0, pk = 0;
-		
+		  		pas= 0, p2 = 0, p3 = 0, p4 = 0, p5 = 0, p6 = 0, p7 = 0, p8 = 0, p9 = 0, p10 = 0, pj = 0, pq = 0, pk = 0, pareja = 0;
+		arc=fopen("Poker.txt","w");
+
+		if (arc==NULL){
+			
+			printf("\n\tNo se encuentra el archivo");
+			return -1;
+		}
+		else{
+			printf("\n\tFondos guardados");
+			fprintf(arc, "%.2f", dinero);
+			fclose(arc);
+		}
 			
 		// Repetición
 				opcion = FRepetir ();
@@ -480,7 +502,7 @@ do {
 			
 		
 	}while (((opcion == 's')  || (opcion == 'S'))||((opcion == 'a')  || (opcion == 'A')));
-
+	
 //}while (dinero > 0);
 	// Despedida y cierre:
 	FCierre ();
