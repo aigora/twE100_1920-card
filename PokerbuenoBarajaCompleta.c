@@ -1,7 +1,7 @@
 /* Trabajo Informatica Grupo CARD 
 Integrantes: Daniel Zamarra Rodriguez (55521)
 			 Roberto Rodríguez Pérez (55437)
-			 Alberto Leamus Rondón ()
+			 Alberto Leamus Rondón (55313)
 			 Carlos Xu Lin (55601)
 Este programa simula un juego de poker con la baraja francesa completa */
 
@@ -82,7 +82,7 @@ int main(){
 	
 	//printf("\n\n\tEn esta timba la apuesta en fija y son siempre 100\044, por tanto no puedes ingresar menos de esa cantidad");
 	opcion2=PartidaGuardada();
-	if ((opcion2=='S')||(opcion2=='s')){
+	if ((opcion2!='N')&&(opcion2!='n')){
 		arc=fopen("Poker.txt","r");
 		fscanf( arc, "%f", &dinero );
 		fclose(arc);
@@ -93,7 +93,7 @@ int main(){
 		dinero = 0;
 		dinero=PedirDinero();
 	}
-	
+
 do {
 
 	//do {

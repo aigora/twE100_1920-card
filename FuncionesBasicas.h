@@ -126,7 +126,7 @@ char PartidaGuardada (void)
 	char letra;
 
 
-	puts ("\n\n\tIntroduzca una 'S' o una 's' si ha jugado antes, o introduzca una 'N' o una 'n',  si es su primera vez.");
+	puts ("\n\n\tIntroduzca una cualquier letra o numero si ha jugado antes, o introduzca una 'N' o una 'n',  si es su primera vez.");
 	printf("\t");
 	scanf ("\n%c", &letra);
 	fflush (stdin);
